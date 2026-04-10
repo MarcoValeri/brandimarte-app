@@ -1,5 +1,15 @@
 @import "tailwindcss";
 
+@theme {
+    --animate-flow: flow 10s linear infinite;
+}
+
+@keyframes flow {
+    to {
+        background-position: 50rem;
+    }
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
