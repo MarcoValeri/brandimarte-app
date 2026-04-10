@@ -1,12 +1,11 @@
-import NavContact from "./components/NavContact/NavContact";
+import Header from "./components/Header/Header";
 
 const HomePage = () => {
     return (
         <div>
             <header>
-                <NavContact />
+                <Header />
             </header>
-            <h2>Brandimarte</h2>
         </div>
     )
 }
