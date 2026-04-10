@@ -2,6 +2,11 @@
 
 @theme {
     --animate-flow: flow 10s linear infinite;
+
+    --color-blue-font: #140D4F;
+    --color-blue-link: #3b28cc;
+    --color-grey-bg: #f7f7f7;
+    --color-green-font: #008000;
 }
 
 @keyframes flow {

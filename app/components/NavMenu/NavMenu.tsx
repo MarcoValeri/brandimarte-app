@@ -18,13 +18,13 @@ const NavMenu = () => {
     const pathname = usePathname();
 
     return (
-        <nav className="relative font-['Open_Sans_Condensed',sans-serif] p-8 bg-gray-100">
+        <nav className="relative font-[family-name:var(--font-open-sans-nf)] p-8 bg-gray-100">
             {/* Desktop menu */}
             <div className="hidden md:flex md:items-center md:justify-between">
-                <div className="font-['Dancing_Script',cursive]">
+                <div>
                     <Link
                         href="/"
-                        className="text-[2rem] text-[#000080] no-underline hover:no-underline"
+                        className="font-[family-name:var(--font-great-vibes-nf)] text-[2rem] text-[#000080] no-underline hover:no-underline"
                     >
                         Brandimarte
                     </Link>
@@ -35,10 +35,10 @@ const NavMenu = () => {
                         <li key={link.href} className="inline list-none text-[1.2rem] px-4">
                             <Link
                                 href={link.href}
-                                className={`text-[#000080] no-underline transition-all duration-500 delay-250 hover:text-blue-600 hover:underline hover:decoration-blue-600 hover:decoration-[20%] ${
+                                className={`relative text-[#000080] no-underline transition-colors duration-300 hover:text-blue-link after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-blue-link after:transition-all after:duration-300 after:ease-in-out ${
                                     pathname === link.href
-                                        ? "underline decoration-blue-600"
-                                        : ""
+                                        ? "text-blue-link after:w-full"
+                                        : "after:w-0 hover:after:w-full"
                                 }`}
                             >
                                 {link.label}
@@ -83,7 +83,7 @@ const NavMenu = () => {
                     <li className="py-[10px] text-[22px] block">
                         <Link
                             href="/"
-                            className="font-['Dancing_Script',cursive] text-[2rem] text-[#000080] no-underline"
+                            className="font-[family-name:var(--font-great-vibes-nf)] text-[2rem] text-[#000080] no-underline"
                             onClick={() => setIsOpen(false)}
                         >
                             Traslochi Brandimarte
