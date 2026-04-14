@@ -1,3 +1,4 @@
+import AboutSection from "./components/AboutSection/AboutSection";
 import Header from "./components/Header/Header";
 
 const HomePage = () => {
@@ -6,6 +7,9 @@ const HomePage = () => {
             <header>
                 <Header />
             </header>
+            <main>
+                <AboutSection />
+            </main>
         </div>
     )
 }
