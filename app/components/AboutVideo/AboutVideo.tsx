@@ -17,9 +17,10 @@ const AboutVideo = () => {
     return (
         <section className="py-12 px-4 md:py-20 md:px-8">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-center text-2xl md:text-5xl uppercase font-bold text-blue-font tracking-wide mb-10 md:mb-16">
+                <h2 className="text-center text-2xl md:text-6xl uppercase font-bold text-blue-font tracking-[2px] mb-10 md:mb-16 font-[family-name:var(--font-noto-serif-tc-nf)]">
                     Chi siamo
                 </h2>
+                <div className="w-16 h-1 bg-blue-link mx-auto -mt-8 mb-10 md:-mt-14 md:mb-16 rounded-full" />
 
                 <div className="relative w-full md:w-[80%] mx-auto cursor-pointer">
                     <video
