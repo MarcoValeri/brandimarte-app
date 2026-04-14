@@ -1,6 +1,7 @@
 import AboutSection from "./components/AboutSection/AboutSection";
 import AboutVideo from "./components/AboutVideo/AboutVideo";
 import Header from "./components/Header/Header";
+import QuoteSection from "./components/QuoteSection/QuoteSection";
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <main>
                 <AboutSection />
                 <AboutVideo />
+                <QuoteSection />
             </main>
         </div>
     )
