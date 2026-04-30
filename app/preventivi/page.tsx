@@ -10,8 +10,8 @@ const PreventiviPage = () => {
             <main>
                 <QuoteSection />
                 <Carousel />
-                <Footer />
             </main>
+            <Footer />
         </div>
     )
 }

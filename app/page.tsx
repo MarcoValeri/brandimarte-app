@@ -16,8 +16,8 @@ const HomePage = () => {
                 <QuoteSection />
                 <Carousel />
                 <ServiceSection />
-                <Footer />
             </main>
+            <Footer />
         </div>
     )
 }

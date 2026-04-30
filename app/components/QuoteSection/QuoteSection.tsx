@@ -75,12 +75,12 @@ const QuoteSection = () => {
                             Seleziona la seguente opzione:
                         </p>
                         <a
-                            href="mailto:info@brandimarte.com"
+                            href="mailto:traslochibrandimarte@gmail.com"
                             target="_blank"
                             className="flex items-center gap-3 px-4 py-3 rounded-lg bg-grey-bg text-blue-font no-underline hover:shadow-sm transition-shadow duration-300"
                         >
                             <FaEnvelope className="text-xl text-black" />
-                            <span className="font-bold text-green-font">info@brandimarte.com</span>
+                            <span className="font-bold text-green-font">traslochibrandimarte@gmail.com</span>
                         </a>
                     </div>
 

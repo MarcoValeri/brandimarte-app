@@ -8,8 +8,8 @@ const ContattiPage = () => {
             <Header subtitle="Contatti" />
             <main>
                 <Carousel />
-                <Footer />
             </main>
+            <Footer />
         </div>
     )
 }

@@ -12,8 +12,8 @@ const ChiSiamoPage = () => {
                 <AboutSection />
                 <AboutVideo />
                 <Carousel />
-                <Footer />
             </main>
+            <Footer />
         </div>
     )
 }

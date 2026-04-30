@@ -6,8 +6,8 @@ interface ButtonQuoteProps {
 }
 
 const ButtonQuote = ({
-    label = "Preventivo online gratuito",
-    href = "/preventivo-online",
+    label = "Preventivo gratuito",
+    href = "/preventivi/preventivo-gratuito",
 }: ButtonQuoteProps) => {
     return (
         <Link href={href} className="no-underline hover:no-underline">

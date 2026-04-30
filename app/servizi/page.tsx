@@ -10,8 +10,8 @@ const ServiziPage = () => {
             <main>
                 <ServiceSection />
                 <Carousel />
-                <Footer />
             </main>
+            <Footer />
         </div>
     )
 }

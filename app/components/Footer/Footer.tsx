@@ -104,13 +104,14 @@ const Footer = () => {
                     <h2 className="text-xl font-bold mb-6">Seguici su</h2>
                     <ul className="flex justify-center gap-8">
                         <li>
-                            <FaFacebook className="text-[2rem] text-[#1877F2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            <a href="https://www.facebook.com/traslochibrandimarte79" target="_blank" aria-label="Facebook">
+                                <FaFacebook className="text-[2rem] text-[#1877F2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            </a>
                         </li>
                         <li>
-                            <FaInstagram className="text-[2rem] text-[#E4405F] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
-                        </li>
-                        <li>
-                            <FaLinkedinIn className="text-[2rem] text-[#0A66C2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            <a href="https://www.instagram.com/traslochi__brandimarte" target="_blank" aria-label="Instagram">
+                                <FaInstagram className="text-[2rem] text-[#E4405F] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            </a>
                         </li>
                     </ul>
                 </div>
