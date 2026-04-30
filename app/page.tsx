@@ -9,17 +9,15 @@ import ServiceSection from "./components/ServiceSection/ServiceSection";
 const HomePage = () => {
     return (
         <div>
-            <header>
-                <Header />
-            </header>
+            <Header />
             <main>
                 <AboutSection />
                 <AboutVideo />
                 <QuoteSection />
                 <Carousel />
                 <ServiceSection />
-                <Footer />
             </main>
+            <Footer />
         </div>
     )
 }

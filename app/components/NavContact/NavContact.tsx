@@ -33,7 +33,7 @@ const NavContact = () => {
                 </li>
                 <li className="inline-block list-none p-4">
                     <a
-                        href="mailto:info@brandimarte.com"
+                        href="mailto:traslochibrandimarte@gmail.com"
                         target="_blank"
                         aria-label="Email icon"
                     >

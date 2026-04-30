@@ -40,7 +40,9 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <FaMapMarkerAlt className="text-[#d24726]" />
-                            <span>Via Ferdinando Maria Poggioli 58 - 00139 Roma</span>
+                            <a href="https://maps.app.goo.gl/seLBTG8NjYCNo8VC9" target="_blank" className="text-blue-font no-underline" aria-label="Google Maps">
+                                Via Ferdinando Maria Poggioli 58 - 00139 Roma
+                            </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <FaPhone className="text-[#2b579a]" />
@@ -62,8 +64,8 @@ const Footer = () => {
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <FaEnvelope className="text-black" />
-                            <a href="mailto:info@brandimarte.com" target="_blank" className="text-blue-font no-underline" aria-label="Email">
-                                info@brandimarte.com
+                            <a href="mailto:traslochibrandimarte@gmail.com" target="_blank" className="text-blue-font no-underline" aria-label="Email">
+                                traslochibrandimarte@gmail.com
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
@@ -102,13 +104,14 @@ const Footer = () => {
                     <h2 className="text-xl font-bold mb-6">Seguici su</h2>
                     <ul className="flex justify-center gap-8">
                         <li>
-                            <FaFacebook className="text-[2rem] text-[#1877F2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            <a href="https://www.facebook.com/traslochibrandimarte79" target="_blank" aria-label="Facebook">
+                                <FaFacebook className="text-[2rem] text-[#1877F2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            </a>
                         </li>
                         <li>
-                            <FaInstagram className="text-[2rem] text-[#E4405F] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
-                        </li>
-                        <li>
-                            <FaLinkedinIn className="text-[2rem] text-[#0A66C2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            <a href="https://www.instagram.com/traslochi__brandimarte" target="_blank" aria-label="Instagram">
+                                <FaInstagram className="text-[2rem] text-[#E4405F] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
+                            </a>
                         </li>
                     </ul>
                 </div>
