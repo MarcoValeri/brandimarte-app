@@ -11,8 +11,8 @@ const ChiSiamoPage = () => {
             <Header subtitle="Chi Siamo" />
             <main>
                 <AboutSection />
-                <AboutVideo />
                 <CarouselServices />
+                <AboutVideo />
                 <Carousel />
             </main>
             <Footer />
