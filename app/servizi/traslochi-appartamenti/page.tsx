@@ -2,6 +2,7 @@ import { FaBoxOpen } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
+import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiAppartamentiPage = () => {
@@ -19,6 +20,7 @@ const TraslochiAppartamentiPage = () => {
                         "Trattiamo la tua casa con la massima cura e rispetto, proteggendo pavimenti, pareti e porte durante tutte le operazioni.",
                     ]}
                 />
+                <CarouselServices />
                 <Carousel />
             </main>
             <Footer />

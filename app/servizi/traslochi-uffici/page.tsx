@@ -2,6 +2,7 @@ import { FaBuilding } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
+import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiUfficiPage = () => {
@@ -19,6 +20,7 @@ const TraslochiUfficiPage = () => {
                         "Il nostro team lavora con rapidità e precisione per permetterti di riprendere l'operatività il prima possibile.",
                     ]}
                 />
+                <CarouselServices />
                 <Carousel />
             </main>
             <Footer />

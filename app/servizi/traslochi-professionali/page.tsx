@@ -2,6 +2,7 @@ import { FaDollyFlatbed } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
+import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiProfessionaliPage = () => {
@@ -19,6 +20,7 @@ const TraslochiProfessionaliPage = () => {
                         "Offriamo soluzioni flessibili per adattarci a qualsiasi tempistica e budget.",
                     ]}
                 />
+                <CarouselServices />
                 <Carousel />
             </main>
             <Footer />

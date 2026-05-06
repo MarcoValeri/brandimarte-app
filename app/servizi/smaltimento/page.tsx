@@ -2,6 +2,7 @@ import { FaRecycle } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
+import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
 import Footer from "@/app/components/Footer/Footer";
 
 const SmaltimentoPage = () => {
@@ -19,6 +20,7 @@ const SmaltimentoPage = () => {
                         "Pensiamo a tutto noi: tu devi solo indicarci cosa ritirare.",
                     ]}
                 />
+                <CarouselServices />
                 <Carousel />
             </main>
             <Footer />

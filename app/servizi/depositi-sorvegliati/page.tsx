@@ -2,6 +2,7 @@ import { FaWarehouse } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
+import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
 import Footer from "@/app/components/Footer/Footer";
 
 const DepositiSorvegliatiPage = () => {
@@ -19,6 +20,7 @@ const DepositiSorvegliatiPage = () => {
                         "Ogni oggetto viene inventariato e conservato in condizioni ottimali di temperatura e umidità.",
                     ]}
                 />
+                <CarouselServices />
                 <Carousel />
             </main>
             <Footer />
