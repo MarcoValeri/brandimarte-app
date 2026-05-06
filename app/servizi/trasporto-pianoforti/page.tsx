@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { FaPeopleCarry } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
 import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
+
+export const metadata: Metadata = {
+    title: "Trasporto Pianoforti | Traslochi Brandimarte Roma",
+    description: "Trasporto specializzato di pianoforti a Roma e in tutta Italia. Operatori formati, attrezzature dedicate e massima sicurezza per il tuo strumento.",
+};
 import Footer from "@/app/components/Footer/Footer";
 
 const TrasportoPianofortiPage = () => {

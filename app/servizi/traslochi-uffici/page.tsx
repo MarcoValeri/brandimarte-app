@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { FaBuilding } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
 import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
+
+export const metadata: Metadata = {
+    title: "Traslochi Uffici | Traslochi Brandimarte Roma",
+    description: "Trasloco di uffici e attività commerciali a Roma. Pianificazione nei weekend, trasporto sicuro di apparecchiature e documenti. Minimo impatto sulla tua attività.",
+};
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiUfficiPage = () => {

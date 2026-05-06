@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { FaWarehouse } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
 import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
+
+export const metadata: Metadata = {
+    title: "Depositi Sorvegliati | Traslochi Brandimarte Roma",
+    description: "Depositi sorvegliati 24/7 a Roma. Videosorveglianza, controllo accessi e condizioni ottimali. Soluzioni a breve e lungo termine per i tuoi beni.",
+};
 import Footer from "@/app/components/Footer/Footer";
 
 const DepositiSorvegliatiPage = () => {

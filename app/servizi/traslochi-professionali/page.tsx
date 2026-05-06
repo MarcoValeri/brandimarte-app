@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { FaDollyFlatbed } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
 import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
+
+export const metadata: Metadata = {
+    title: "Traslochi Professionali | Traslochi Brandimarte Roma",
+    description: "Traslochi professionali su misura con personale qualificato. Attrezzature professionali e soluzioni flessibili. Preventivo gratuito.",
+};
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiProfessionaliPage = () => {

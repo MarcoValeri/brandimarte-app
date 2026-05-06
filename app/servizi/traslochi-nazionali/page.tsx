@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { FaTruckMoving } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
 import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
+
+export const metadata: Metadata = {
+    title: "Traslochi Nazionali | Traslochi Brandimarte Roma",
+    description: "Servizio di traslochi nazionali in tutta Italia. Imballaggio, trasporto e posizionamento. Preventivo gratuito con Traslochi Brandimarte.",
+};
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiNazionaliPage = () => {

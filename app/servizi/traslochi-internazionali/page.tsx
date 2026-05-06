@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import { FaPlaneDeparture } from "react-icons/fa";
 import Header from "@/app/components/Header/Header";
 import ServiceSingle from "@/app/components/ServiceSingle/ServiceSingle";
 import Carousel from "@/app/components/Carousel/Carousel";
 import CarouselServices from "@/app/components/CarouselServices/CarouselServices";
+
+export const metadata: Metadata = {
+    title: "Traslochi Internazionali | Traslochi Brandimarte Roma",
+    description: "Traslochi internazionali verso qualsiasi destinazione. Pratiche doganali, imballaggio professionale e assicurazione completa con Traslochi Brandimarte.",
+};
 import Footer from "@/app/components/Footer/Footer";
 
 const TraslochiInternazionaliPage = () => {
