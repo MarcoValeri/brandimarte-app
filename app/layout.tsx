@@ -7,6 +7,7 @@ import {
     Open_Sans,
 } from "next/font/google";
 import "./globals.css";
+import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
 
 const greatVibes = Great_Vibes({
     weight: "400",
@@ -62,7 +63,10 @@ export default function RootLayout({
             lang="it"
             className={`${greatVibes.variable} ${notoSerifTC.variable} ${bangers.variable} ${goblinOne.variable} ${openSans.variable} h-full antialiased`}
         >
-            <body className="min-h-full flex flex-col">{children}</body>
+            <body className="min-h-full flex flex-col">
+                {children}
+                <WhatsAppButton />
+            </body>
         </html>
     );
 }
