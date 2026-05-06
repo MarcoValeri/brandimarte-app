@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
     FaBuilding,
     FaMapMarkerAlt,
@@ -11,7 +12,6 @@ import {
     FaInfoCircle,
     FaFacebook,
     FaInstagram,
-    FaLinkedinIn,
 } from "react-icons/fa";
 
 const days = [
@@ -24,111 +24,139 @@ const days = [
     { label: "Domenica", hours: "chiuso", jsDay: 0 },
 ];
 
+const quickLinks = [
+    { label: "Home", href: "/" },
+    { label: "Chi siamo", href: "/chi-siamo" },
+    { label: "Servizi", href: "/servizi" },
+    { label: "Preventivi", href: "/preventivi" },
+    { label: "Contatti", href: "/contatti" },
+];
+
 const Footer = () => {
     const today = new Date().getDay();
     const year = new Date().getFullYear();
 
     return (
-        <footer className="bg-grey-bg text-blue-font">
+        <footer className="bg-blue-font text-white/90">
             <div className="flex flex-col md:flex-row">
                 {/* Business info */}
-                <div className="flex-1 p-8 text-center md:text-left md:border-r md:border-white">
-                    <ul className="space-y-2 text-[1.2rem]">
+                <div className="flex-1 p-8 text-center md:text-left md:border-r md:border-white/10">
+                    <h3 className="text-lg font-bold text-white mb-4">Traslochi Brandimarte</h3>
+                    <ul className="space-y-3 text-sm">
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaBuilding className="text-[#094ab2]" />
-                            <span>Traslochi Brandimarte</span>
+                            <FaBuilding className="text-blue-300" />
+                            <span>Traslochi Brandimarte Srl</span>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaMapMarkerAlt className="text-[#d24726]" />
-                            <a href="https://maps.app.goo.gl/seLBTG8NjYCNo8VC9" target="_blank" className="text-blue-font no-underline" aria-label="Google Maps">
-                                Via Ferdinando Maria Poggioli 58 - 00139 Roma
+                            <FaMapMarkerAlt className="text-red-400" />
+                            <a href="https://maps.app.goo.gl/seLBTG8NjYCNo8VC9" target="_blank" className="text-white/90 no-underline hover:text-white transition-colors duration-200" aria-label="Google Maps">
+                                Via F. M. Poggioli 58 - 00139 Roma
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaPhone className="text-[#2b579a]" />
-                            <a href="tel:+393381106682" className="text-blue-font no-underline" aria-label="Phone number">
+                            <FaPhone className="text-blue-300" />
+                            <a href="tel:+393381106682" className="text-white/90 no-underline hover:text-white transition-colors duration-200" aria-label="Phone number">
                                 +39.338.11.06.682
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <FaWhatsapp className="text-[#25D366]" />
-                            <a href="https://wa.me/+393381106682" target="_blank" className="text-blue-font no-underline" aria-label="WhatsApp">
+                            <a href="https://wa.me/+393381106682" target="_blank" className="text-white/90 no-underline hover:text-white transition-colors duration-200" aria-label="WhatsApp">
                                 +39.338.11.06.682
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaTty className="text-[#80397b]" />
-                            <a href="tel:+390687132237" className="text-blue-font no-underline" aria-label="Landline">
+                            <FaTty className="text-purple-300" />
+                            <a href="tel:+390687132237" className="text-white/90 no-underline hover:text-white transition-colors duration-200" aria-label="Landline">
                                 +39.06.87.13.22.37
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaEnvelope className="text-black" />
-                            <a href="mailto:traslochibrandimarte@gmail.com" target="_blank" className="text-blue-font no-underline" aria-label="Email">
+                            <FaEnvelope className="text-white/70" />
+                            <a href="mailto:traslochibrandimarte@gmail.com" target="_blank" className="text-white/90 no-underline hover:text-white transition-colors duration-200" aria-label="Email">
                                 traslochibrandimarte@gmail.com
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaAt className="text-yellow-500" />
-                            <a href="mailto:brandimarte.andrea@pec.it" target="_blank" className="text-blue-font no-underline" aria-label="PEC email">
+                            <FaAt className="text-yellow-300" />
+                            <a href="mailto:brandimarte.andrea@pec.it" target="_blank" className="text-white/90 no-underline hover:text-white transition-colors duration-200" aria-label="PEC email">
                                 Pec: brandimarte.andrea@pec.it
                             </a>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
-                            <FaInfoCircle className="text-[#19BBFE]" />
+                            <FaInfoCircle className="text-sky-300" />
                             <span>PI 15929701009</span>
                         </li>
                     </ul>
                 </div>
 
-                {/* Timetable */}
-                <div className="flex-1 p-8 text-center md:text-left border-t md:border-t-0 md:border-r border-white">
-                    <h2 className="text-xl font-bold mb-4">Siamo aperti</h2>
-                    <ul className="space-y-2 text-[1.2rem]">
+                {/* Timetable + Quick Links */}
+                <div className="flex-1 p-8 text-center md:text-left border-t md:border-t-0 md:border-r border-white/10">
+                    <h3 className="text-lg font-bold text-white mb-4">Siamo aperti</h3>
+                    <ul className="space-y-2 text-sm">
                         {days.map((day) => (
                             <li
                                 key={day.label}
-                                className={today === day.jsDay ? "font-black" : ""}
+                                className={`py-1 px-2 rounded ${
+                                    today === day.jsDay
+                                        ? "bg-white/10 font-bold text-white"
+                                        : ""
+                                }`}
                             >
                                 {day.label}: {day.hours}
                             </li>
                         ))}
-                        <li className="font-black mt-4">
-                            Su appuntamento: 24 ore su 24 - 7 giorni su 7
+                        <li className="mt-3 py-1 px-2 rounded bg-white/10 font-bold text-white">
+                            Su appuntamento: 24/7
                         </li>
                     </ul>
                 </div>
 
-                {/* Social */}
-                <div className="flex-1 p-8 text-center border-t md:border-t-0 border-white">
-                    <h2 className="text-xl font-bold mb-6">Seguici su</h2>
-                    <ul className="flex justify-center gap-8">
-                        <li>
-                            <a href="https://www.facebook.com/traslochibrandimarte79" target="_blank" aria-label="Facebook">
-                                <FaFacebook className="text-[2rem] text-[#1877F2] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/traslochi__brandimarte" target="_blank" aria-label="Instagram">
-                                <FaInstagram className="text-[2rem] text-[#E4405F] hover:opacity-80 transition-opacity duration-300 cursor-pointer" />
-                            </a>
-                        </li>
+                {/* Social + Quick nav */}
+                <div className="flex-1 p-8 text-center border-t md:border-t-0 border-white/10">
+                    <h3 className="text-lg font-bold text-white mb-4">Seguici su</h3>
+                    <div className="flex justify-center gap-6 mb-8">
+                        <a href="https://www.facebook.com/traslochibrandimarte79" target="_blank" aria-label="Facebook" className="flex items-center gap-2 text-white/80 no-underline hover:text-white transition-colors duration-200">
+                            <FaFacebook className="text-2xl text-[#1877F2]" />
+                            <span className="text-sm">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/traslochi__brandimarte" target="_blank" aria-label="Instagram" className="flex items-center gap-2 text-white/80 no-underline hover:text-white transition-colors duration-200">
+                            <FaInstagram className="text-2xl text-[#E4405F]" />
+                            <span className="text-sm">Instagram</span>
+                        </a>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-white mb-4">Link rapidi</h3>
+                    <ul className="space-y-2">
+                        {quickLinks.map((link) => (
+                            <li key={link.href}>
+                                <Link
+                                    href={link.href}
+                                    scroll={true}
+                                    className="text-sm text-white/70 no-underline hover:text-white transition-colors duration-200"
+                                >
+                                    {link.label}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </div>
             </div>
 
             {/* Powered by */}
-            <div className="p-8 text-center border-t border-white">
-                <p>
+            <div className="py-6 px-8 text-center border-t border-white/10 bg-black/20">
+                <p className="text-sm text-white/60">
                     Made with{" "}
-                    <span className="text-[2rem] text-red-500">♥</span>{" "}
+                    <span className="text-red-400">♥</span>{" "}
                     in London by{" "}
-                    <span
-                        className="text-[#123456] font-black no-underline"
+                    <a
+                        href="https://devmarco.com/"
+                        target="_blank"
+                        className="text-white font-bold no-underline hover:text-white/80 transition-colors duration-200"
                     >
                         Marco Valeri
-                    </span>
-                    {" "}- <span className="font-black">©</span> {year} - All rights reserved
+                    </a>
+                    {" "} — © {year} - All rights reserved
                 </p>
             </div>
         </footer>
