@@ -21,7 +21,7 @@ const HomePage = () => {
             </main>
             <Footer />
         </div>
-    )
-}
+    );
+};
 
 export default HomePage;

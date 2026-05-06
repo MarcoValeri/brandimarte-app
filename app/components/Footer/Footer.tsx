@@ -132,6 +132,7 @@ const Footer = () => {
                             <li key={link.href}>
                                 <Link
                                     href={link.href}
+                                    scroll={true}
                                     className="text-sm text-white/70 no-underline hover:text-white transition-colors duration-200"
                                 >
                                     {link.label}
