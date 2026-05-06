@@ -36,4 +36,11 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    padding-top: 52px;
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 0;
+    }
 }
