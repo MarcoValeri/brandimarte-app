@@ -20,19 +20,19 @@ const NavMenu = () => {
     return (
         <nav className="relative font-[family-name:var(--font-open-sans-nf)] p-8 bg-gray-100">
             {/* Desktop menu */}
-            <div className="hidden md:flex md:items-center md:justify-between">
+            <div className="hidden lg:flex lg:items-center lg:justify-between">
                 <div>
                     <Link
                         href="/"
                         className="font-[family-name:var(--font-great-vibes-nf)] text-[2rem] text-[#000080] no-underline hover:no-underline"
                     >
-                        Brandimarte
+                        Traslochi Brandimarte
                     </Link>
                 </div>
 
                 <ul className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex">
                     {navLinks.map((link) => (
-                        <li key={link.href} className="inline list-none text-[1.2rem] px-4">
+                        <li key={link.href} className="inline list-none text-base px-3">
                             <Link
                                 href={link.href}
                                 className={`relative text-[#000080] no-underline transition-colors duration-300 hover:text-blue-link after:content-[''] after:absolute after:left-0 after:bottom-[-2px] after:h-[2px] after:bg-blue-link after:transition-all after:duration-300 after:ease-in-out ${
@@ -51,7 +51,7 @@ const NavMenu = () => {
             </div>
 
             {/* Mobile hamburger menu */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
                     className="relative z-40 flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-0"
@@ -75,12 +75,21 @@ const NavMenu = () => {
                     />
                 </button>
 
+                {/* Backdrop */}
+                {isOpen && (
+                    <div
+                        className="fixed inset-0 bg-black/40 z-20"
+                        onClick={() => setIsOpen(false)}
+                    />
+                )}
+
+                {/* Slide-in menu */}
                 <ul
-                    className={`absolute w-[90%] left-0 top-0 pt-[125px] pb-[50px] px-[50px] bg-gray-100 list-none antialiased origin-[0%_0%] transition-transform duration-500 z-30 ${
+                    className={`fixed left-0 top-0 w-full min-h-screen pt-[100px] pb-[50px] px-[40px] bg-gray-100 list-none antialiased transition-transform duration-500 z-30 ${
                         isOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                 >
-                    <li className="py-[10px] text-[22px] block">
+                    <li className="py-3 block">
                         <Link
                             href="/"
                             className="font-[family-name:var(--font-great-vibes-nf)] text-[2rem] text-[#000080] no-underline"
@@ -91,13 +100,13 @@ const NavMenu = () => {
                     </li>
 
                     {navLinks.map((link) => (
-                        <li key={link.href} className="py-[10px] text-[22px] block">
+                        <li key={link.href} className="py-3 block">
                             <Link
                                 href={link.href}
-                                className={`text-[#000080] no-underline hover:no-underline ${
+                                className={`text-[20px] text-[#000080] no-underline hover:no-underline flex items-center gap-3 py-2 px-3 rounded-lg transition-colors duration-200 ${
                                     pathname === link.href
-                                        ? "underline decoration-blue-600"
-                                        : ""
+                                        ? "bg-blue-link/10 border-l-4 border-blue-link font-bold"
+                                        : "hover:bg-gray-200"
                                 }`}
                                 onClick={() => setIsOpen(false)}
                             >
@@ -106,7 +115,7 @@ const NavMenu = () => {
                         </li>
                     ))}
 
-                    <li className="py-[10px] text-[22px] block" onClick={() => setIsOpen(false)}>
+                    <li className="py-4 block" onClick={() => setIsOpen(false)}>
                         <ButtonQuote />
                     </li>
                 </ul>
