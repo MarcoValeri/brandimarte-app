@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback } from "react";
 import Image, { StaticImageData } from "next/image";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import colosseoImg from "@/app/assets/images/colosseo-a-roma.jpg";
 import carouselOne from "@/app/assets/images/carousel-one.jpg";
 import carouselTwo from "@/app/assets/images/carousel-two.jpg";
 import carouselThree from "@/app/assets/images/carousel-three.jpg";
@@ -16,6 +15,7 @@ import carouselEight from "@/app/assets/images/carousel-eight.jpg";
 import carouselNine from "@/app/assets/images/carousel-nine.jpg";
 import carouselTen from "@/app/assets/images/carousel-ten.jpg";
 import carouselEleven from "@/app/assets/images/carousel-eleven.jpg";
+import colosseoImg from "@/app/assets/images/colosseo-a-roma.jpg";
 
 interface Slide {
     src: StaticImageData;
@@ -23,7 +23,7 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-    { src: colosseoImg, alt: "Colosseo a Roma" },
+    { src: carouselTen, alt: "Coppia che trasloca"},
     { src: carouselOne, alt: "Stanza durante il trasloco"},
     { src: carouselTwo, alt: "Stanza prima del trasloco"},
     { src: carouselThree, alt: "Persona che fa il trasloco"},
@@ -33,8 +33,8 @@ const slides: Slide[] = [
     { src: carouselSeven, alt: "Operai che effettuano un trasloco"},
     { src: carouselEight, alt: "Coppia durante il trasloco"},
     { src: carouselNine, alt: "Coppia che guarda nella scatola di un trasloco"},
-    { src: carouselTen, alt: "Coppia che trasloca"},
     { src: carouselEleven, alt: "Stanza dopo il trasloco"},
+    { src: colosseoImg, alt: "Colosseo a Roma" },
     // Add more images here:
     // { src: importedImg, alt: "Description" },
 ];
