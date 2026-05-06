@@ -54,7 +54,7 @@ const NavMenu = () => {
             <div className="md:hidden">
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="relative z-10 flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-0"
+                    className="relative z-40 flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-0"
                     aria-label="Toggle menu"
                     aria-expanded={isOpen}
                 >
@@ -76,7 +76,7 @@ const NavMenu = () => {
                 </button>
 
                 <ul
-                    className={`absolute w-[90%] left-0 top-0 pt-[125px] pb-[50px] px-[50px] bg-gray-100 list-none antialiased origin-[0%_0%] transition-transform duration-500 z-5 ${
+                    className={`absolute w-[90%] left-0 top-0 pt-[125px] pb-[50px] px-[50px] bg-gray-100 list-none antialiased origin-[0%_0%] transition-transform duration-500 z-30 ${
                         isOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
                 >
