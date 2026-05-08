@@ -45,7 +45,7 @@ const Footer = () => {
                     <ul className="space-y-3 text-sm">
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <FaBuilding className="text-blue-300" />
-                            <span>Traslochi Brandimarte Srl</span>
+                            <span>Traslochi Brandimarte</span>
                         </li>
                         <li className="flex items-center gap-2 justify-center md:justify-start">
                             <FaMapMarkerAlt className="text-red-400" />
