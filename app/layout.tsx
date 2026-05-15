@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
     Great_Vibes,
     Noto_Serif_TC,
@@ -63,6 +64,20 @@ export default function RootLayout({
             lang="it"
             className={`${greatVibes.variable} ${notoSerifTC.variable} ${bangers.variable} ${goblinOne.variable} ${openSans.variable} h-full antialiased`}
         >
+            <head>
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-0P9393PK0D"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-0P9393PK0D');
+                    `}
+                </Script>
+            </head>
             <body className="min-h-full flex flex-col">
                 {children}
                 <WhatsAppButton />
