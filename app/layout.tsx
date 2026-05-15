@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import {
     Great_Vibes,
     Noto_Serif_TC,
@@ -63,6 +64,32 @@ export default function RootLayout({
             lang="it"
             className={`${greatVibes.variable} ${notoSerifTC.variable} ${bangers.variable} ${goblinOne.variable} ${openSans.variable} h-full antialiased`}
         >
+            <head>
+                {!isDevEnv && (
+                    <>
+                        <Script
+                            id="Cookiebot"
+                            src="https://consent.cookiebot.com/uc.js"
+                            data-cbid="2090a5c9-b4a1-43ac-827f-b97132d5bb8c"
+                            data-blockingmode="auto"
+                            type="text/javascript"
+                            strategy="afterInteractive"
+                        />
+                        <Script
+                            src="https://www.googletagmanager.com/gtag/js?id=G-0P9393PK0D"
+                            strategy="afterInteractive"
+                        />
+                        <Script id="google-analytics" strategy="afterInteractive">
+                            {`
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', 'G-0P9393PK0D');
+                            `}
+                        </Script>
+                    </>
+                )}
+            </head>
             <body className="min-h-full flex flex-col">
                 {children}
                 <WhatsAppButton />
