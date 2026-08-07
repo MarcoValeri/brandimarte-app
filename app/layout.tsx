@@ -41,6 +41,7 @@ const openSans = Open_Sans({
 
 const currentEnv = process.env.NEXT_PUBLIC_ENV;
 const isDevEnv = currentEnv === "dev";
+const isSiteSuspended = process.env.NEXT_PUBLIC_SITE_SUSPENDED === "true";
 
 export const metadata: Metadata = {
     title: "Traslochi Brandimarte",
@@ -91,8 +92,20 @@ export default function RootLayout({
                 )}
             </head>
             <body className="min-h-full flex flex-col">
-                {children}
-                <WhatsAppButton />
+                {isSiteSuspended ? (
+                    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
+                        <div className="text-center max-w-md">
+                            <h1 className="text-3xl font-bold text-blue-font mb-4">
+                                Sito temporaneamente non disponibile
+                            </h1>
+                        </div>
+                    </div>
+                ) : (
+                    <>
+                        {children}
+                        <WhatsAppButton />
+                    </>
+                )}
             </body>
         </html>
     );
